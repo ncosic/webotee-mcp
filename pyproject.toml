@@ -15,8 +15,8 @@ dependencies = ["mcp>=1.9"]
 
 [project.urls]
 Homepage = "https://www.webotee.com/amazon-product-research-mcp"
-Documentation = "https://github.com/webotee/webotee-mcp/tree/main/docs"
-Repository = "https://github.com/webotee/webotee-mcp"
+Documentation = "https://github.com/ncosic/webotee-mcp/tree/main/docs"
+Repository = "https://github.com/ncosic/webotee-mcp"
 
 [tool.hatch.build.targets.wheel]
 packages = ["webotee_mcp"]

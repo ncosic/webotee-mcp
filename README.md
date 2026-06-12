@@ -1,7 +1,7 @@
 # Webotee — Amazon Product Research MCP
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![Smoke test](https://github.com/webotee/webotee-mcp/actions/workflows/smoke.yml/badge.svg)](https://github.com/webotee/webotee-mcp/actions/workflows/smoke.yml)
+[![Smoke test](https://github.com/ncosic/webotee-mcp/actions/workflows/smoke.yml/badge.svg)](https://github.com/ncosic/webotee-mcp/actions/workflows/smoke.yml)
 [![MCP](https://img.shields.io/badge/MCP-Streamable_HTTP-5A4FCF.svg)](https://modelcontextprotocol.io)
 
 **Amazon brand, seller, niche & buy-box intelligence — inside your own Claude or ChatGPT.**

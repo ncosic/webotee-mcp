@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "websiteUrl": "https://www.webotee.com/amazon-product-research-mcp",
   "repository": {
-    "url": "https://github.com/webotee/webotee-mcp",
+    "url": "https://github.com/ncosic/webotee-mcp",
     "source": "github"
   },
   "remotes": [
