@@ -1,0 +1,389 @@
+{
+  "identifier": "ncosic-webotee-mcp",
+  "name": "Webotee — Amazon Product Research MCP",
+  "version": "1.0.1",
+  "author": "Webotee",
+  "authorUrl": "https://www.webotee.com",
+  "description": "Amazon brand, seller, niche & buy-box intelligence inside your own Claude or ChatGPT — a research connector for sellers.",
+  "icon": "🛒",
+  "tags": [
+    "amazon",
+    "amazon-seller",
+    "product-research",
+    "fba",
+    "sourcing",
+    "buy-box",
+    "brand-protection",
+    "ecommerce",
+    "walmart",
+    "claude",
+    "chatgpt",
+    "mcp"
+  ],
+  "tools": [
+    {
+      "name": "search_products",
+      "description": "Keyword search over product titles/descriptions; returns brand, price, 30-day demand, fulfillment and rating.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "top_sourcing_picks",
+      "description": "Top sourcing-pick ASINs across the catalog with price, category, brand, gating and velocity filters.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "evaluate_asin_sourcing",
+      "description": "Score one ASIN for FBA sourcing: composite 0-100 plus velocity, gating, friction, margin and brand posture.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "asin_profit_calc",
+      "description": "Estimate whether an ASIN hits a target margin given buy-box price, FBA fees and referral fee; or breakeven COGS.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "asin_comparables",
+      "description": "Find ASINs similar to a given ASIN by brand, price band and seller count.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "asin_buybox_history",
+      "description": "Buy-box seller history for an ASIN over the observed window.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "collect_asin_now",
+      "description": "On-demand single-ASIN snapshot (current title, price, today's offers) plus historical intelligence.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "evaluate_brand",
+      "description": "Brand-level read: control posture, winner diversity, Amazon/FBA share, churn, demand and top ASINs.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "brand_buybox_trajectory",
+      "description": "A brand's buy-box winner trajectory over time.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "brand_new_asins",
+      "description": "A brand's newly-appeared ASINs.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "brand_similar",
+      "description": "Brands similar to a given brand by category, price tier and competition.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "brand_under_attack",
+      "description": "Detect competitive attack: a surge in new sellers, buy-box churn or price drops.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "brands_gaining_sellers",
+      "description": "Brands gaining sellers (rising-competition signal).",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "brands_in_operator_network",
+      "description": "Brands that share sellers with a target brand — the operator graph.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "find_undercompeted_brands",
+      "description": "Brands with low seller competition but real sales presence (the flagship discovery tool).",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "find_brands_with_high_seller_churn",
+      "description": "Brands with high buy-box / seller churn.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "find_deconcentrating_brands",
+      "description": "Brands whose seller concentration is falling.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "find_single_seller_brands",
+      "description": "Brands held by a single dominant seller.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "filter_brands_by_fba_share",
+      "description": "Brands filtered by FBA share of the buy box.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "top_velocity_brands",
+      "description": "Highest sales-velocity brands.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "category_undercompeted_brands",
+      "description": "Under-competed brands within a specific category.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "find_new_operators",
+      "description": "Brand-new sellers that recently started selling.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "operator_compare",
+      "description": "Two sellers head-to-head: brand, ASIN and category overlap and marketplace presence.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "operator_top_brands",
+      "description": "The brands a seller carries most, by estimated 30-day sales.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "operator_top_asins",
+      "description": "The ASINs a seller wins most, by estimated 30-day sales, with buy-box share.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "operator_brands_by_competition",
+      "description": "A seller's brands ranked by fewest competing sellers.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "operator_category_dominance",
+      "description": "Which categories a seller dominates.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "operator_new_brands",
+      "description": "Brands a seller recently added.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "operator_lost_brands",
+      "description": "Brands a seller recently dropped.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "top_expanding_operators",
+      "description": "Sellers expanding fastest by adding brands.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "filter_operators_by_fba_share",
+      "description": "Sellers filtered by FBA share.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "find_underserved_niches",
+      "description": "Under-served sub-categories with real demand and room to compete, ranked by private-label winnability.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "evaluate_category_for_private_label",
+      "description": "Is a category/niche winnable for a new private-label brand? Per-signal pass/fail verdict.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "category_metrics",
+      "description": "Per-category metrics: sellers, demand and concentration.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "category_new_entrants",
+      "description": "Brands/sellers newly entering a category.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "category_top_growers",
+      "description": "Fastest-growing brands in a category.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "categories_amazon_retreating",
+      "description": "Categories where Amazon retail is retreating — openings for third-party sellers.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "competitive_landscape",
+      "description": "Top sellers by buy-box days and top brands by winner-diversity for a brand or category.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "xmkt_pricing_compare",
+      "description": "Matched Amazon vs Walmart pricing, delta % and a coarse FBA profitability check.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "brand_xmarket",
+      "description": "A brand's Amazon vs Walmart cross-marketplace presence.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "operator_xmarket_presence",
+      "description": "A seller's Amazon vs Walmart presence.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "gating_repricing_advice",
+      "description": "Ungate / arbitrage / avoid recommendation for an ASIN with a metric-cited rationale.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "set_cost_floor",
+      "description": "Set your cost floor for an ASIN or brand (workspace setting).",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "map_violations_today",
+      "description": "Active MAP (Minimum Advertised Price) violations for products in your workspace.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "unauthorized_sellers",
+      "description": "Given a brand and your authorized-seller list, flag unauthorized sellers.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "risk_assessment",
+      "description": "Composite risk score for an ASIN or brand: MAP events, unauthorized sellers and recommended actions.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "watchlist_add",
+      "description": "Create or add to a saved tracking list (ASINs, brands, sellers, niches); captures a baseline.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "watchlist_add_rule",
+      "description": "Add an alert rule to a watchlist.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "watchlist_list",
+      "description": "List your watchlists and their items.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "watchlist_delta",
+      "description": "What changed since the watchlist's baseline.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "watchlist_diff",
+      "description": "Diff two watchlist snapshots.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "watchlist_remove",
+      "description": "Remove items or a whole watchlist.",
+      "inputSchema": {
+        "type": "object"
+      }
+    }
+  ]
+}
