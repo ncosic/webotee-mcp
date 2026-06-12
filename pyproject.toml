@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "webotee-mcp"
+version = "1.0.0"
+description = "Thin Python client for Webotee AI Connect — the Amazon Product Research MCP for Claude & ChatGPT."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "CP Development d.o.o." }]
+keywords = ["mcp", "model-context-protocol", "amazon", "amazon-seller", "claude", "chatgpt", "product-research", "webotee"]
+dependencies = ["mcp>=1.9"]
+
+[project.urls]
+Homepage = "https://www.webotee.com/amazon-product-research-mcp"
+Documentation = "https://github.com/webotee/webotee-mcp/tree/main/docs"
+Repository = "https://github.com/webotee/webotee-mcp"
+
+[tool.hatch.build.targets.wheel]
+packages = ["webotee_mcp"]

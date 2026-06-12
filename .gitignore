@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+
+# Node (mcp-remote cache, if run locally)
+node_modules/
+~/.mcp-auth/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Generated (regenerate with scripts/gen_tools.py; keep out of source control if you prefer)
+# docs/tools.generated.md

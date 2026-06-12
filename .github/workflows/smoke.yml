@@ -1,0 +1,36 @@
+name: smoke
+
+# Verifies the hosted connector is reachable and correctly OAuth-gated.
+# No secrets, no account needed: checks public discovery metadata + that the
+# MCP endpoint rejects unauthenticated calls (a healthy gated server).
+on:
+  schedule:
+    - cron: "0 7 * * *"   # daily
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  reachable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: OAuth protected-resource metadata is published (200)
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" https://app.webotee.com/.well-known/oauth-protected-resource)
+          echo "oauth-protected-resource -> $code"
+          test "$code" = "200"
+
+      - name: OAuth authorization-server metadata is published (200)
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" https://app.webotee.com/.well-known/oauth-authorization-server)
+          echo "oauth-authorization-server -> $code"
+          test "$code" = "200"
+
+      - name: MCP endpoint rejects unauthenticated calls (401)
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" -X POST https://app.webotee.com/mcp \
+            -H "Content-Type: application/json" \
+            -H "Accept: application/json, text/event-stream" \
+            -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"smoke","version":"0"}}}')
+          echo "POST /mcp (unauth) -> $code"
+          test "$code" = "401"

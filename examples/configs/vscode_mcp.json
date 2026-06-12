@@ -1,0 +1,10 @@
+{
+  "//": "VS Code (GitHub Copilot / agent mode). Save as .vscode/mcp.json in your workspace. Bridges to the hosted Webotee connector via mcp-remote; first run opens a browser for the Webotee OAuth sign-in. Requires a paid Webotee plan.",
+  "servers": {
+    "webotee": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://app.webotee.com/mcp"]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "//": "Sample MCP discovery manifest. This should be SERVED from the connector domain at https://app.webotee.com/.well-known/mcp.json (it is kept here for reference / version control). Clients and directories that probe .well-known can auto-discover the remote server + its OAuth metadata.",
+  "name": "com.webotee/amazon-product-research-mcp",
+  "description": "Amazon brand, seller, niche & buy-box intelligence inside your own Claude or ChatGPT.",
+  "websiteUrl": "https://www.webotee.com/amazon-product-research-mcp",
+  "remotes": [
+    { "type": "streamable-http", "url": "https://app.webotee.com/mcp" }
+  ],
+  "authorization": {
+    "type": "oauth2",
+    "protectedResourceMetadata": "https://app.webotee.com/.well-known/oauth-protected-resource",
+    "authorizationServerMetadata": "https://app.webotee.com/.well-known/oauth-authorization-server"
+  }
+}

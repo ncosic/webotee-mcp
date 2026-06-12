@@ -1,0 +1,9 @@
+{
+  "//": "Cursor. Save as ~/.cursor/mcp.json (global) or .cursor/mcp.json (project). Bridges to the hosted Webotee connector via mcp-remote; first run opens a browser for the Webotee OAuth sign-in. Requires a paid Webotee plan.",
+  "mcpServers": {
+    "webotee": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://app.webotee.com/mcp"]
+    }
+  }
+}

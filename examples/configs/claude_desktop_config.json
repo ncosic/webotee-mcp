@@ -1,0 +1,9 @@
+{
+  "//": "Claude Desktop. Newer versions: add via Settings -> Connectors -> Add custom connector and paste https://app.webotee.com/mcp (recommended). This file is the fallback for clients that read a config and only speak local stdio; it bridges to the hosted server via mcp-remote and opens a browser for the Webotee OAuth sign-in.",
+  "mcpServers": {
+    "webotee": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://app.webotee.com/mcp"]
+    }
+  }
+}

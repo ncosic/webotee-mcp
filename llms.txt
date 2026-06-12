@@ -1,0 +1,26 @@
+# Webotee — Amazon Product Research MCP
+
+> Webotee AI Connect is a hosted MCP (Model Context Protocol) connector that adds
+> Webotee's Amazon brand, seller, niche and buy-box research dataset to your own
+> Claude or ChatGPT. It is a research connector for Amazon sellers — it reads and
+> explains pre-collected marketplace intelligence; it does not place orders or
+> change Amazon listings, and it is not a live shopping agent.
+
+- Product / start a 7-day free trial: https://www.webotee.com/amazon-product-research-mcp
+- Connector URL (Streamable HTTP, OAuth): https://app.webotee.com/mcp
+- Pricing: https://www.webotee.com/pricing (Starter $29 / Scout $89 / Scout Pro $179 / Scout + Protect $295)
+- Requires a paid Webotee plan (Starter or higher).
+
+## Docs
+- Setup (Claude, ChatGPT, Cursor, VS Code, Claude Code): /docs/setup.md
+- Authentication (OAuth 2.1): /docs/auth.md
+- Tool catalog (50+ tools): /docs/tools.md
+- Example prompts: /examples/prompts.md
+- Python quickstart: /examples/quickstart.py
+
+## What you can ask
+Which sellers dominate the buy box on a brand; find under-competed brands and
+under-served niches to source; reverse a seller into the brands they carry by
+estimated sales; map the operator network behind a listing; score an ASIN for
+FBA sourcing; detect a brand under attack; flag unauthorized sellers and MAP
+violations; compare Amazon vs Walmart pricing.
