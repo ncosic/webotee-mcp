@@ -19,3 +19,7 @@ node_modules/
 
 # Generated (regenerate with scripts/gen_tools.py; keep out of source control if you prefer)
 # docs/tools.generated.md
+
+# MCP registry namespace signing key — never commit
+key.pem
+*.pem
