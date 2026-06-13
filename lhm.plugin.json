@@ -1,10 +1,10 @@
 {
   "identifier": "ncosic-webotee-mcp",
   "name": "Webotee — Amazon Product Research MCP",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Webotee",
   "authorUrl": "https://www.webotee.com",
-  "description": "Amazon brand, seller, niche & buy-box intelligence inside your own Claude or ChatGPT — a research connector for sellers.",
+  "description": "Amazon brand, seller, niche & buy-box intelligence inside your own Claude or ChatGPT. Proprietary observed dataset — no third-party API keys to bring, nothing to self-host. Connect with OAuth in 2 minutes. Built for sellers.",
   "icon": "🛒",
   "tags": [
     "amazon",
