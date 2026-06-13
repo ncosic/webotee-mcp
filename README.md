@@ -10,7 +10,7 @@ Webotee AI Connect adds Webotee's Amazon operator, brand, niche and seller resea
 
 👉 **Product page / start a 7‑day free trial:** https://www.webotee.com/amazon-product-research-mcp
 
-This repository is the **public client + docs + manifest** for the connector. The Webotee MCP server is hosted and runs at `https://app.webotee.com/mcp` — you don't install or run it; you add it to your assistant and sign in with your Webotee account.
+This repository is the **public client + docs + manifest** for the connector. The Webotee MCP server is **fully hosted** at `https://app.webotee.com/mcp` — **there's nothing to self-host, no server to run, and no third-party API keys to bring.** You add the URL to your assistant and sign in with your Webotee account (OAuth, ~2 minutes). The data is Webotee's own — you don't connect or pay for any other service.
 
 ---
 
@@ -33,7 +33,7 @@ See [`examples/prompts.md`](./examples/prompts.md) for more, and [`docs/tools.md
 
 - A **paid Webotee plan** — Starter ($29/mo, 7‑day free trial) or higher. [Start a trial →](https://www.webotee.com/amazon-product-research-mcp)
 - An AI client that supports remote MCP connectors: **Claude** (Desktop/Web), **ChatGPT** (Developer Mode), **Cursor**, **VS Code**, **Claude Code**.
-- Sign‑in is via **OAuth** in your browser — no API keys to copy, nothing to store.
+- Sign‑in is via **OAuth** in your browser — **no API keys to copy or bring, nothing to self‑host or store.**
 
 ---
 
