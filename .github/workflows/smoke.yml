@@ -1,8 +1,10 @@
 name: smoke
 
 # Verifies the hosted connector is reachable and correctly OAuth-gated.
-# No secrets, no account needed: checks public discovery metadata + that the
-# MCP endpoint rejects unauthenticated calls (a healthy gated server).
+# No secrets, no account needed: checks public discovery metadata, that the MCP
+# discovery handshake (initialize) is served unauthenticated, and that tool
+# EXECUTION (tools/call) is OAuth-gated (401) — a healthy discovery-open,
+# execution-gated server.
 on:
   schedule:
     - cron: "0 7 * * *"   # daily
@@ -26,11 +28,20 @@ jobs:
           echo "oauth-authorization-server -> $code"
           test "$code" = "200"
 
-      - name: MCP endpoint rejects unauthenticated calls (401)
+      - name: MCP discovery handshake works unauthenticated (initialize -> 200)
         run: |
           code=$(curl -s -o /dev/null -w "%{http_code}" -X POST https://app.webotee.com/mcp \
             -H "Content-Type: application/json" \
             -H "Accept: application/json, text/event-stream" \
             -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"smoke","version":"0"}}}')
-          echo "POST /mcp (unauth) -> $code"
+          echo "POST /mcp initialize (unauth) -> $code"
+          test "$code" = "200"
+
+      - name: MCP execution is OAuth-gated (unauthenticated tools/call -> 401)
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" -X POST https://app.webotee.com/mcp \
+            -H "Content-Type: application/json" \
+            -H "Accept: application/json, text/event-stream" \
+            -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"search_products","arguments":{}}}')
+          echo "POST /mcp tools/call (unauth) -> $code"
           test "$code" = "401"
