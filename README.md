@@ -6,7 +6,7 @@
 
 **Amazon brand, seller, niche & buy-box intelligence — inside your own Claude or ChatGPT.**
 
-Webotee AI Connect adds Webotee's Amazon operator, brand, niche and seller research dataset to the AI you already use. Ask a question in Claude or ChatGPT and it queries the Webotee dataset directly — a research connector for sellers, built on 2+ years of daily US (and UK) marketplace observations of the BSR top‑1M+.
+Webotee AI Connect adds Webotee's Amazon operator, brand, niche and seller research dataset to the AI you already use. Ask a question in Claude or ChatGPT and it queries the Webotee dataset directly — a research connector for sellers, built on daily marketplace observations across 11 Amazon marketplaces (US, UK, DE, CA, AU, JP, IT, FR, ES, MX, BR) plus Walmart US, with 2+ years of history in the BSR top‑1M+ for US and UK.
 
 👉 **Product page / start a 7‑day free trial:** https://www.webotee.com/amazon-product-research-mcp
 

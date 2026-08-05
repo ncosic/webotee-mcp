@@ -4,7 +4,7 @@ Webotee AI Connect exposes **50+ research tools** to your AI. Your assistant dec
 
 > **Authoritative source:** the live connector's `tools/list` (tier‑gated) is the single source of truth for tool names, descriptions and parameters. This file is a human summary — regenerate it any time with [`scripts/gen_tools.py`](../scripts/gen_tools.py). Tools that change your Webotee **workspace** (watchlists, cost floors) write only to your Webotee account; **no tool places orders or changes your Amazon listings.**
 >
-> **Glossary:** an **operator** is a professional, often cross‑brand, third‑party **seller**. **Marketplaces:** `1` = Amazon UK, `2` = Amazon US (default), with select Amazon↔Walmart cross‑marketplace tools.
+> **Glossary:** an **operator** is a professional, often cross‑brand, third‑party **seller**. **Marketplaces:** `1` = Amazon UK, `2` = Amazon US (default), `3` = Walmart US, `4` = Amazon CA, `5` = Amazon AU, `6` = Amazon DE, `7` = Amazon JP, `8` = Amazon IT, `9` = Amazon FR, `10` = Amazon ES, `11` = Amazon MX, `12` = Amazon BR. Catalog depth varies by country; US and UK are the deepest. Select Amazon↔Walmart cross‑marketplace tools.
 
 ## Product & ASIN sourcing
 | Tool | What it does |
